@@ -9,6 +9,57 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Meiryo,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:225px 1fr}.sidebar{background:#fff;border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:10px;padding:0 10px}.brand-mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#66a5ff,#3979f6);color:white;display:grid;place-items:center;font-weight:900;font-size:18px}.brand strong{display:block;font-size:17px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#536783;text-align:left;padding:11px 12px;border-radius:10px;display:flex;align-items:center;gap:12px}.nav button:hover,.nav button.active{background:var(--blue2);color:var(--blue)}.nav .ico{width:20px;text-align:center;font-size:17px}.sidebar-note{margin-top:auto;border-radius:14px;background:linear-gradient(160deg,#eef5ff,#f8fbff);padding:15px;color:#71809b;font-size:12px;line-height:1.7}.main{min-width:0}.topbar{height:70px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 28px;position:sticky;top:0;z-index:5}.search{flex:1;max-width:650px;position:relative}.search input{width:100%;border:1px solid var(--line);background:#fafcff;padding:11px 14px 11px 38px;border-radius:10px;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:5px;font-size:23px;color:#8796ad}.topright{margin-left:auto;color:var(--muted);white-space:nowrap}.content{padding:26px;max-width:1700px;margin:auto}.welcome{display:flex;align-items:center;gap:14px;margin-bottom:22px}.sun{width:44px;height:44px;border-radius:14px;background:#fff4dc;display:grid;place-items:center;font-size:25px}.welcome h1{font-size:23px;margin:0 0 5px}.welcome p{margin:0;color:var(--muted)}.welcome .date{margin-left:auto;color:var(--muted);font-size:13px}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);min-width:0}.stat{padding:17px;display:flex;gap:12px;align-items:flex-start}.stat-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;font-size:19px;flex-shrink:0}.stat-label{font-size:12px;color:var(--muted)}.stat-value{font-size:23px;font-weight:750;margin:5px 0}.stat-foot{font-size:11px;color:var(--muted)}.blue{background:#eaf2ff;color:#3979f6}.green{background:#e3f8ef;color:#159d72}.orange{background:#fff0df;color:#df8a2d}.purple{background:#f0eaff;color:#8867e5}.red{background:#ffe8e9;color:#df5c67}.columns{grid-template-columns:minmax(260px,1fr) minmax(350px,1.4fr) minmax(260px,1fr);align-items:start}.stack{display:grid;gap:14px}.card-head{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}.card-head h2{font-size:15px;margin:0}.card-head button,.link-button{border:0;background:transparent;color:var(--blue);font-size:12px}.card-body{padding:16px}.project{margin-bottom:18px}.project:last-child{margin-bottom:0}.project-top{display:flex;align-items:center;gap:9px}.project-dot{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;color:white;font-size:13px}.project-name{font-weight:650;flex:1;min-width:0}.tag{font-size:10px;padding:4px 7px;border-radius:6px;background:#edf3ff;color:#3979f6;white-space:nowrap}.tag.plan{background:#fff2df;color:#d88928}.tag.done{background:#e4f8ef;color:#159d72}.progress{height:7px;background:#eef2f8;border-radius:10px;overflow:hidden;margin:10px 0 0 40px}.progress span{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,#71a9ff,#3979f6)}.project-bottom{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin:6px 0 0 40px}.site{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid #f0f3f8}.site:last-child{border:0;padding-bottom:0}.site-thumb{width:42px;height:42px;border-radius:9px;background:linear-gradient(135deg,#132c46,#4785a8);color:#fff;display:grid;place-items:center;font-weight:800}.site-info{min-width:0;flex:1}.site-info strong{display:block;font-size:12px;margin-bottom:4px}.site-info a{font-size:11px;color:var(--blue);text-decoration:none;overflow-wrap:anywhere}.site-info a:hover{text-decoration:underline}.external{color:var(--muted);text-decoration:none}.task-row{display:flex;align-items:flex-start;gap:9px;padding:10px 0;border-bottom:1px solid #f0f3f8}.task-row:last-child{border:0}.task-row input{accent-color:var(--blue);margin-top:3px}.task-text{flex:1;line-height:1.45}.task-row.completed .task-text{text-decoration:line-through;color:#9aa6b8}.priority{font-size:10px;border-radius:6px;padding:3px 6px;background:#fff0e5;color:#d7832a}.priority.low{background:#e5f8ef;color:#159d72}.priority.high{background:#ffe8e9;color:#d95762}.schedule-item{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #f0f3f8}.schedule-item:last-child{border:0}.schedule-time{width:47px;color:var(--blue);font-weight:700;font-size:12px}.schedule-item strong{font-size:12px}.schedule-item small{display:block;color:var(--muted);margin-top:4px}.quickgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.quick{display:flex;align-items:center;gap:8px;text-decoration:none;color:#405570;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:12px}.quick:hover{border-color:#b8d0ff;background:#f8fbff}.quick span{font-size:16px}.money-row{display:flex;gap:8px;margin-bottom:12px}.money-row input{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;padding:9px}.money-row button,.primary{border:0;border-radius:8px;background:var(--blue);color:#fff;padding:9px 12px}.money-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f3f8}.money-item:last-child{border:0}.muted{color:var(--muted)}.quote{padding:20px;background:linear-gradient(135deg,#f1f7ff,#fff);text-align:center;color:#627590;line-height:1.8}.quote strong{display:block;color:#304b70;font-size:14px;margin-bottom:7px}.empty{color:var(--muted);text-align:center;padding:20px 8px}.section-page{display:none}.section-page.active{display:block}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.section-title h1{font-size:24px;margin:0}.form-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.form-row input,.form-row select,.form-row textarea{border:1px solid var(--line);border-radius:8px;padding:10px;min-width:0}.form-row input{flex:1}.wide-list{padding:0 18px}.wide-list .project{padding:15px 0;border-bottom:1px solid var(--line)}.wide-list .project:last-child{border:0}.mission-row{display:flex;align-items:flex-start;gap:9px;padding:9px 0;border-bottom:1px solid #f0f3f8}.mission-row:last-child{border-bottom:0}.mission-row input{accent-color:var(--blue);margin-top:3px}.mission-row.done .mission-label{text-decoration:line-through;color:#9aa6b8}.mission-label{flex:1;line-height:1.45}.save-dot{color:var(--green);font-size:12px}.notice{background:#f1f7ff;border:1px solid #dbe9ff;padding:12px 14px;border-radius:10px;color:#536783;font-size:12px;line-height:1.7;margin-bottom:14px}.footer{text-align:center;color:#a0adbf;font-size:11px;padding:25px}
 @media(max-width:1150px){.columns{grid-template-columns:repeat(2,minmax(0,1fr))}.columns .stack:last-child{grid-column:1/-1}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.app{grid-template-columns:1fr}.sidebar{padding:10px;border-right:0;border-bottom:1px solid var(--line);gap:10px}.brand{padding:4px 8px}.nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;padding:9px}.sidebar-note{display:none}.topbar{height:58px;padding:0 14px}.topright{display:none}.content{padding:17px 12px}.welcome{align-items:flex-start}.welcome h1{font-size:18px}.welcome .date{display:none}.stats{gap:9px}.stat{padding:12px;gap:8px}.stat-icon{width:32px;height:32px}.stat-value{font-size:18px}.columns{grid-template-columns:1fr}.columns .stack:last-child{grid-column:auto}.search input{padding:9px 10px 9px 34px}.section-title h1{font-size:21px}}
+
+.cards-table{width:100%;border-collapse:collapse;font-size:12px}
+.cards-table th{text-align:left;color:var(--muted);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.cards-table td{padding:7px 6px;border-bottom:1px solid #f0f3f8;vertical-align:middle}
+.cards-table input,.cards-table select{border:1px solid var(--line);border-radius:7px;padding:6px;min-width:0}
+.cards-table input[type=number]{width:92px}
+.cards-table .memo-input{width:130px}
+.badge{font-size:10px;padding:3px 7px;border-radius:6px;background:#edf3ff;color:#3979f6;white-space:nowrap}
+.badge.listed{background:#fff2df;color:#d88928}.badge.soldout{background:#e4f8ef;color:#159d72}.badge.hold{background:#f0eaff;color:#8867e5}
+.table-wrap{overflow-x:auto}
+
+/* ===== スマホ対応（720px以下）：大きめ表示 ===== */
+@media(max-width:720px){
+ body{font-size:16px}
+ input,select,textarea{font-size:16px!important}
+ .content{padding:20px 14px 28px}
+ .card-body{padding:18px 16px}
+ .card-head{padding:16px}
+ .card-head h2{font-size:16px}
+ .welcome h1{font-size:22px}
+ .welcome{flex-wrap:wrap}
+ .section-title h1{font-size:22px}
+ .nav button{font-size:15px;padding:12px 14px}
+ .stats,.section-page .stats{grid-template-columns:1fr!important;gap:12px}
+ .stat{padding:18px;gap:14px}
+ .stat-icon{width:48px;height:48px;font-size:22px;border-radius:14px}
+ .stat-label{font-size:13px}
+ .stat-value{font-size:26px;overflow-wrap:anywhere}
+ .stat-foot{font-size:12px}
+ .form-row>*{flex:1 1 100%}
+ .form-row button{flex:0 0 auto;padding:12px 16px}
+ .form-row input,.form-row select{padding:12px}
+ .table-wrap{overflow-x:visible}
+ .cards-table,.cards-table tbody{display:block;width:100%}
+ .cards-table thead{display:none}
+ .cards-table tr{display:block;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px;background:#fff}
+ .cards-table td{display:flex;align-items:center;justify-content:space-between;gap:12px;border:0;border-bottom:1px solid #f0f3f8;padding:9px 0;width:100%;font-size:14px}
+ .cards-table td:last-child{border-bottom:0;justify-content:flex-end}
+ .cards-table td::before{content:attr(data-label);color:var(--muted);font-size:12px;white-space:nowrap}
+ .cards-table td:first-child{display:block;font-size:15px}
+ .cards-table td:first-child::before{content:none}
+ .cards-table input[type=number]{width:140px;max-width:58%}
+ .cards-table select{max-width:58%}
+ .cards-table .memo-input{width:58%}
+ .project-name{font-size:15px}
+ .site-info strong{font-size:14px}
+ .site-info a{font-size:12px}
+ .task-text,.mission-label{font-size:15px}
+ .quick{font-size:14px;padding:13px}
+ .notice{font-size:13px}
+}
 </style>
 </head>
 <body>
@@ -20,6 +71,7 @@
     <button data-page="projects"><span class="ico">⌘</span>プロジェクト</button>
     <button data-page="sites"><span class="ico">↗</span>公開サイト</button>
     <button data-page="money"><span class="ico">▣</span>お金・家計</button>
+    <button data-page="cards"><span class="ico">🃏</span>カード売却</button>
     <button data-page="schedule"><span class="ico">▦</span>予定・タスク</button>
     <button data-page="notes"><span class="ico">▤</span>メモ</button>
     <button data-page="settings"><span class="ico">⚙</span>設定・データ</button>
@@ -89,6 +141,20 @@
   <div class="section-title"><h1>メモ</h1></div>
   <div class="card"><div class="card-body"><div class="form-row"><input id="noteTitle" placeholder="メモのタイトル"><button class="primary" id="saveNoteBtn">メモを保存</button></div><textarea id="noteBody" placeholder="アイデア、やりたいこと、作業メモなど…" style="width:100%;min-height:130px;border:1px solid var(--line);border-radius:9px;padding:12px"></textarea><div id="allNotes" style="margin-top:15px"></div></div></div>
 </section>
+
+<section class="section-page" id="page-cards">
+  <div class="section-title"><h1>カード売却の管理</h1><button class="primary" id="addCardBtn">＋ カード追加</button></div>
+  <div class="notice">PSA鑑定カードの在庫と売却状況を管理します。相場目安は「実際に売れた価格」の調査ベース（2026年10月27日時点）。状態・出品先・価格はその場で変更でき、自動保存されます。売却価格を入れると下の合計に反映されます。</div>
+  <div class="grid stats" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+    <div class="card stat"><div class="stat-icon blue">🃏</div><div><div class="stat-label">在庫（未売却）</div><div class="stat-value" id="cardStockCount">0枚</div><div class="stat-foot">売却済を除く</div></div></div>
+    <div class="card stat"><div class="stat-icon orange">🏷</div><div><div class="stat-label">出品中</div><div class="stat-value" id="cardListedCount">0件</div><div class="stat-foot">いま売りに出ている数</div></div></div>
+    <div class="card stat"><div class="stat-icon purple">◎</div><div><div class="stat-label">相場目安の合計</div><div class="stat-value" id="cardMarketTotal">¥0</div><div class="stat-foot" id="cardMarketNote">調査済みのカードのみ</div></div></div>
+    <div class="card stat"><div class="stat-icon green">¥</div><div><div class="stat-label">売却額の合計</div><div class="stat-value" id="cardSoldTotal">¥0</div><div class="stat-foot">手数料・送料は含みません</div></div></div>
+  </div>
+  <div class="card" id="cardFormCard" style="display:none;margin-bottom:14px"><div class="card-head"><h2>カードを追加</h2></div><div class="card-body"><div class="form-row"><input id="newCardName" placeholder="カード名"><select id="newCardGrade"><option>PSA10</option><option>PSA9</option><option>PSA8</option><option>その他</option></select><input id="newCardPrice" type="number" min="0" placeholder="出品価格（円）"></div><div class="form-row"><button class="primary" id="saveCardBtn">保存</button><button id="cancelCardBtn">キャンセル</button></div></div></div>
+  <div class="card"><div class="card-body table-wrap"><table class="cards-table"><thead><tr><th>カード名</th><th>グレード</th><th>相場目安</th><th>状態</th><th>出品先</th><th>出品価格</th><th>売却価格</th><th>メモ</th><th></th></tr></thead><tbody id="cardRows"></tbody></table></div></div>
+  <p class="muted" style="font-size:11px;margin-top:10px">熊本ドン!!は「ベストセット（PSA10×7＋PSA9×3）」としてメルカリで278,000円出品が第一候補。セットで出すときは対象カードの状態を「出品中」、出品先を「メルカリ（セット）」に変えてください。ボルサリーノはスニダン227,800円が推奨です。</p>
+</section>
 <section class="section-page" id="page-settings">
   <div class="section-title"><h1>設定・データ</h1></div>
   <div class="card"><div class="card-head"><h2>データのバックアップ</h2></div><div class="card-body"><p class="muted">登録したプロジェクト・タスク・予定・メモ・家計・今日のミッションをJSONファイルとして書き出せます。入力内容はこのブラウザに自動保存され、必要なときに手動バックアップできます。</p><div class="form-row"><button class="primary" id="exportBtn">データを書き出す</button><label class="quick" style="cursor:pointer">データを読み込む<input id="importFile" type="file" accept="application/json" style="max-width:180px"></label></div><p class="muted">注意：このアプリのデータは現在のブラウザに保存されます。ブラウザのデータ削除や端末変更に備えて、定期的にバックアップしてください。</p><button id="resetBtn" style="border:1px solid #f0c6ca;color:#c94e59;background:#fff;border-radius:8px;padding:9px 12px">サンプルデータに戻す</button></div></div>
@@ -126,10 +192,11 @@ const starter={
  ],
  notes:[{id:1,title:'次にやりたいこと',body:'・ゲームに相場変動イベントを追加\n・ダッシュボードから各制作物をすぐ開けるようにする'}],
  money:{income:0,expense:0,debtBalance:0,monthlyRepayment:0,savings:0,savingsGoal:500000},
- missions:{}
+ missions:{},
+ cards:[{"id": 1, "name": "ボルサリーノ コミパラ OP16-073", "grade": "PSA10", "cert": "171683044", "status": "未出品", "platform": "スニダン", "price": 227800, "sold": 0, "market": 228000, "memo": "スニダン成約22.5〜24万円で活発"}, {"id": 2, "name": "ピカチュウV リバースホイル スタートデッキ100 129", "grade": "PSA10", "cert": "170479892", "status": "未出品", "platform": "メルカリ", "price": 16800, "sold": 0, "market": 15800, "memo": "メルカリSOLD 15,800円"}, {"id": 3, "name": "レックウザVMAX VSTARユニバース 108", "grade": "PSA10", "cert": "170479886", "status": "未出品", "platform": "メルカリ", "price": 12800, "sold": 0, "market": 12000, "memo": "成約10,900〜13,500円"}, {"id": 4, "name": "ナミ パラレル PRB02-012", "grade": "PSA10", "cert": "170479885", "status": "未出品", "platform": "メルカリ", "price": 14800, "sold": 0, "market": 14000, "memo": "成約13,000〜15,000円"}, {"id": 5, "name": "ルフィ 29周年プロモ P-159", "grade": "PSA10", "cert": "177259186", "status": "未出品", "platform": "メルカリ", "price": 11800, "sold": 0, "market": 10000, "memo": "3枚あり・1枚ずつ出品"}, {"id": 6, "name": "ルフィ 29周年プロモ P-159", "grade": "PSA10", "cert": "177259187", "status": "未出品", "platform": "", "price": 11800, "sold": 0, "market": 10000, "memo": "3枚あり・1枚ずつ出品"}, {"id": 7, "name": "ルフィ 29周年プロモ P-159", "grade": "PSA10", "cert": "177259188", "status": "未出品", "platform": "", "price": 11800, "sold": 0, "market": 10000, "memo": "3枚あり・1枚ずつ出品"}, {"id": 8, "name": "メガゲンガーex MA M2a-230", "grade": "PSA9", "cert": "170479891", "status": "未出品", "platform": "メルカリ", "price": 5500, "sold": 0, "market": 4500, "memo": "成約2,800〜6,200円"}, {"id": 9, "name": "熊本ドン くまモン＆ルフィ", "grade": "PSA10", "cert": "170479875", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 32000, "memo": "ベストセット候補（PSA10）"}, {"id": 10, "name": "熊本ドン ゾロ", "grade": "PSA10", "cert": "170479876", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 11, "name": "熊本ドン ナミ", "grade": "PSA10", "cert": "170479877", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 12, "name": "熊本ドン ウソップ", "grade": "PSA9", "cert": "170479878", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA9）"}, {"id": 13, "name": "熊本ドン サンジ", "grade": "PSA10", "cert": "170479879", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 14, "name": "熊本ドン チョッパー", "grade": "PSA10", "cert": "170479880", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 15, "name": "熊本ドン ロビン", "grade": "PSA9", "cert": "170479881", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA9）"}, {"id": 16, "name": "熊本ドン フランキー", "grade": "PSA10", "cert": "170479882", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 17, "name": "熊本ドン ブルック", "grade": "PSA9", "cert": "170479883", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA9）"}, {"id": 18, "name": "熊本ドン ジンベエ", "grade": "PSA10", "cert": "170479884", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "ベストセット候補（PSA10）"}, {"id": 19, "name": "熊本ドン くまモン＆ルフィ", "grade": "PSA9", "cert": "170479865", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 20, "name": "熊本ドン ゾロ", "grade": "PSA9", "cert": "170479866", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 21, "name": "熊本ドン ナミ", "grade": "PSA10", "cert": "170479867", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 22, "name": "熊本ドン ウソップ", "grade": "PSA9", "cert": "170479868", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 23, "name": "熊本ドン サンジ", "grade": "PSA10", "cert": "170479869", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 24, "name": "熊本ドン チョッパー", "grade": "PSA10", "cert": "170479870", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 25, "name": "熊本ドン ロビン", "grade": "PSA9", "cert": "170479871", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 26, "name": "熊本ドン フランキー", "grade": "PSA10", "cert": "170479872", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 27, "name": "熊本ドン ブルック", "grade": "PSA9", "cert": "170479873", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 28, "name": "熊本ドン ジンベエ", "grade": "PSA10", "cert": "170479874", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "2セット目"}, {"id": 29, "name": "ピカチュウex スタートデッキGenerations 038", "grade": "PSA10", "cert": "170479893", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 30, "name": "ピカチュウV ファミリーポケカ 019", "grade": "PSA10", "cert": "170479894", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 31, "name": "レックウザV スペシャルデッキセット 015", "grade": "PSA10", "cert": "170479887", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 32, "name": "メガゲンガーex スタートセット 003", "grade": "PSA9", "cert": "170479890", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 33, "name": "ゴースト AR メガスタートセット 022", "grade": "PSA10", "cert": "170479888", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 34, "name": "ゴースト AR メガスタートセット 022", "grade": "PSA10", "cert": "170479889", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 35, "name": "ルフィ LIMITED CARD COLLECTION VOL.1 001", "grade": "PSA10", "cert": "177259185", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 36, "name": "ルフィ ST31-RED 001", "grade": "PSA10", "cert": "177259183", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 37, "name": "ナミ プロモ 3周年ガイド 017", "grade": "PSA10", "cert": "177259176", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 38, "name": "ボア・ハンコック プロモセット2 059", "grade": "PSA10", "cert": "177259178", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 39, "name": "ジンベエ プロモセット2 005", "grade": "PSA10", "cert": "177259180", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 40, "name": "トラファルガー・ロー プロモセット2 008", "grade": "PSA9", "cert": "177259177", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 41, "name": "サンジ プロモセット2 013", "grade": "PSA8", "cert": "177259179", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 42, "name": "ルフィ 25周年コレクション 001", "grade": "PSA9", "cert": "177259181", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 43, "name": "サンジ 25周年コレクション 013", "grade": "PSA10", "cert": "177259182", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 44, "name": "虚の玉座 プロモ 099", "grade": "PSA9", "cert": "177259184", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 45, "name": "ナツコミ2026 メタキラカード ワンピース", "grade": "PSA10", "cert": "177259174", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}, {"id": 46, "name": "ナツコミ2026 メタキラカード カグラバチ", "grade": "PSA10", "cert": "177259175", "status": "未出品", "platform": "", "price": 0, "sold": 0, "market": 0, "memo": "相場未調査"}]
 };
 let data=loadData();
-function loadData(){try{const x=JSON.parse(localStorage.getItem(KEY));if(x&&x.projects&&x.tasks){x.money=Object.assign({income:0,expense:0,debtBalance:0,monthlyRepayment:0,savings:0,savingsGoal:500000},x.money||{});x.missions=x.missions||{};x.notes=x.notes||[];x.schedule=x.schedule||[];x.sites=x.sites||[];return x}}catch(e){}return structuredClone(starter)}
+function loadData(){try{const x=JSON.parse(localStorage.getItem(KEY));if(x&&x.projects&&x.tasks){x.money=Object.assign({income:0,expense:0,debtBalance:0,monthlyRepayment:0,savings:0,savingsGoal:500000},x.money||{});x.missions=x.missions||{};x.cards=x.cards||structuredClone(starter.cards);x.notes=x.notes||[];x.schedule=x.schedule||[];x.sites=x.sites||[];return x}}catch(e){}return structuredClone(starter)}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(data));const s=el('saveStatus');if(s)s.innerHTML='<span class="save-dot">● 保存済み</span>';localStorage.setItem(KEY+'_saved_at',new Date().toISOString());render()}catch(e){const s=el('saveStatus');if(s)s.textContent='保存エラー：空き容量を確認'}}
 function yen(n){return '¥'+Number(n||0).toLocaleString('ja-JP')}
 function el(id){return document.getElementById(id)}
@@ -185,7 +252,46 @@ el('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{
 el('importFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const obj=JSON.parse(await f.text());if(!obj.projects||!obj.tasks||!obj.money)throw Error();data=obj;save();alert('データを読み込みました')}catch(err){alert('読み込めないファイルです。バックアップJSONを選んでください')}e.target.value=''};
 el('resetBtn').onclick=()=>{if(confirm('現在のデータを初期サンプルに戻します。事前にバックアップしましたか？')){data=structuredClone(starter);save();alert('初期データに戻しました')}};
 el('globalSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){render();return}const matches=data.projects.some(p=>p.name.toLowerCase().includes(q))||data.sites.some(s=>s.name.toLowerCase().includes(q)||s.url.toLowerCase().includes(q))||data.tasks.some(t=>t.text.toLowerCase().includes(q))||data.notes.some(n=>(n.title+n.body).toLowerCase().includes(q));if(matches){if(data.projects.some(p=>p.name.toLowerCase().includes(q)))goto('projects');else if(data.sites.some(s=>(s.name+s.url).toLowerCase().includes(q)))goto('sites');else if(data.tasks.some(t=>t.text.toLowerCase().includes(q)))goto('schedule');else goto('notes')}});
-render();
+
+function cardBadge(s){let c=s==='出品中'?'listed':s==='売却済'?'soldout':s==='保留'?'hold':'';return `<span class="badge ${c}">${esc(s)}</span>`}
+function renderCards(){
+ if(!Array.isArray(data.cards))data.cards=structuredClone(starter.cards);
+ const cs=data.cards;
+ const stock=cs.filter(c=>c.status!=='売却済').length;
+ const listed=cs.filter(c=>c.status==='出品中').length;
+ const known=cs.filter(c=>Number(c.market)>0&&c.status!=='売却済');
+ const marketTotal=known.reduce((a,c)=>a+Number(c.market||0),0);
+ const soldTotal=cs.filter(c=>c.status==='売却済').reduce((a,c)=>a+Number(c.sold||0),0);
+ el('cardStockCount').textContent=stock+'枚';
+ el('cardListedCount').textContent=listed+'件';
+ el('cardMarketTotal').textContent=yen(marketTotal);
+ el('cardMarketNote').textContent='相場調査済み '+known.length+'件分（未調査は含みません）';
+ el('cardSoldTotal').textContent=yen(soldTotal);
+ el('cardRows').innerHTML=cs.map(c=>`<tr>
+  <td><strong>${esc(c.name)}</strong><div class="muted" style="font-size:10px">cert ${esc(c.cert||'')}</div></td>
+  <td data-label="グレード">${esc(c.grade)}</td>
+  <td data-label="相場目安"><input type="number" min="0" class="card-market" data-id="${c.id}" value="${Number(c.market)||0}" aria-label="相場目安"></td>
+  <td data-label="状態"><select class="card-status" data-id="${c.id}">${['未出品','出品中','売却済','保留'].map(s=>`<option ${s===c.status?'selected':''}>${s}</option>`).join('')}</select><div style="margin-top:4px">${cardBadge(c.status)}</div></td>
+  <td data-label="出品先"><select class="card-platform" data-id="${c.id}">${['','メルカリ','メルカリ（セット）','スニダン','ヤフオク','店舗買取','その他'].map(s=>`<option value="${s}" ${s===c.platform?'selected':''}>${s||'—'}</option>`).join('')}</select></td>
+  <td data-label="出品価格"><input type="number" min="0" class="card-price" data-id="${c.id}" value="${Number(c.price)||0}" aria-label="出品価格"></td>
+  <td data-label="売却価格"><input type="number" min="0" class="card-sold" data-id="${c.id}" value="${Number(c.sold)||0}" aria-label="売却価格"></td>
+  <td data-label="メモ"><input class="memo-input card-memo" data-id="${c.id}" value="${esc(c.memo||'')}" aria-label="メモ"></td>
+  <td><button class="link-button delete-card" data-id="${c.id}" aria-label="カード削除">×</button></td></tr>`).join('')||'<tr><td colspan="9"><div class="empty">カードはまだありません</div></td></tr>';
+}
+function updateCard(id,field,value){const c=data.cards.find(x=>x.id==id);if(!c)return;c[field]=value;save();renderCards()}
+document.addEventListener('change',e=>{
+ if(e.target.matches('.card-status'))updateCard(e.target.dataset.id,'status',e.target.value);
+ if(e.target.matches('.card-platform'))updateCard(e.target.dataset.id,'platform',e.target.value);
+ if(e.target.matches('.card-price'))updateCard(e.target.dataset.id,'price',Math.max(0,Number(e.target.value)||0));
+ if(e.target.matches('.card-sold'))updateCard(e.target.dataset.id,'sold',Math.max(0,Number(e.target.value)||0));
+ if(e.target.matches('.card-market'))updateCard(e.target.dataset.id,'market',Math.max(0,Number(e.target.value)||0));
+ if(e.target.matches('.card-memo'))updateCard(e.target.dataset.id,'memo',e.target.value);
+});
+document.addEventListener('click',e=>{const b=e.target.closest('.delete-card');if(b&&confirm('このカードを一覧から削除しますか？')){data.cards=data.cards.filter(c=>c.id!=b.dataset.id);save();renderCards()}});
+el('addCardBtn').onclick=()=>el('cardFormCard').style.display='block';
+el('cancelCardBtn').onclick=()=>el('cardFormCard').style.display='none';
+el('saveCardBtn').onclick=()=>{const name=el('newCardName').value.trim();if(!name)return alert('カード名を入力してください');data.cards.push({id:Date.now(),name,grade:el('newCardGrade').value,cert:'',status:'未出品',platform:'',price:Math.max(0,Number(el('newCardPrice').value)||0),sold:0,market:0,memo:''});el('newCardName').value='';el('newCardPrice').value='';el('cardFormCard').style.display='none';save();renderCards()};
+render();renderCards();
 </script>
 </body>
 </html>
