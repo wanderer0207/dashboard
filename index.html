@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Dashboard | 自分専用ダッシュボード</title>
+<style>
+:root{--bg:#f5f7fb;--panel:#fff;--text:#172b4d;--muted:#71809b;--line:#e7edf5;--blue:#3979f6;--blue2:#eaf2ff;--green:#18a77a;--orange:#f59b38;--red:#e45e68;--purple:#8b6be8;--shadow:0 5px 22px rgba(28,54,92,.045)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Meiryo,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:225px 1fr}.sidebar{background:#fff;border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:10px;padding:0 10px}.brand-mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#66a5ff,#3979f6);color:white;display:grid;place-items:center;font-weight:900;font-size:18px}.brand strong{display:block;font-size:17px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#536783;text-align:left;padding:11px 12px;border-radius:10px;display:flex;align-items:center;gap:12px}.nav button:hover,.nav button.active{background:var(--blue2);color:var(--blue)}.nav .ico{width:20px;text-align:center;font-size:17px}.sidebar-note{margin-top:auto;border-radius:14px;background:linear-gradient(160deg,#eef5ff,#f8fbff);padding:15px;color:#71809b;font-size:12px;line-height:1.7}.main{min-width:0}.topbar{height:70px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 28px;position:sticky;top:0;z-index:5}.search{flex:1;max-width:650px;position:relative}.search input{width:100%;border:1px solid var(--line);background:#fafcff;padding:11px 14px 11px 38px;border-radius:10px;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:5px;font-size:23px;color:#8796ad}.topright{margin-left:auto;color:var(--muted);white-space:nowrap}.content{padding:26px;max-width:1700px;margin:auto}.welcome{display:flex;align-items:center;gap:14px;margin-bottom:22px}.sun{width:44px;height:44px;border-radius:14px;background:#fff4dc;display:grid;place-items:center;font-size:25px}.welcome h1{font-size:23px;margin:0 0 5px}.welcome p{margin:0;color:var(--muted)}.welcome .date{margin-left:auto;color:var(--muted);font-size:13px}.grid{display:grid;gap:14px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);min-width:0}.stat{padding:17px;display:flex;gap:12px;align-items:flex-start}.stat-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;font-size:19px;flex-shrink:0}.stat-label{font-size:12px;color:var(--muted)}.stat-value{font-size:23px;font-weight:750;margin:5px 0}.stat-foot{font-size:11px;color:var(--muted)}.blue{background:#eaf2ff;color:#3979f6}.green{background:#e3f8ef;color:#159d72}.orange{background:#fff0df;color:#df8a2d}.purple{background:#f0eaff;color:#8867e5}.red{background:#ffe8e9;color:#df5c67}.columns{grid-template-columns:minmax(260px,1fr) minmax(350px,1.4fr) minmax(260px,1fr);align-items:start}.stack{display:grid;gap:14px}.card-head{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}.card-head h2{font-size:15px;margin:0}.card-head button,.link-button{border:0;background:transparent;color:var(--blue);font-size:12px}.card-body{padding:16px}.project{margin-bottom:18px}.project:last-child{margin-bottom:0}.project-top{display:flex;align-items:center;gap:9px}.project-dot{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;color:white;font-size:13px}.project-name{font-weight:650;flex:1;min-width:0}.tag{font-size:10px;padding:4px 7px;border-radius:6px;background:#edf3ff;color:#3979f6;white-space:nowrap}.tag.plan{background:#fff2df;color:#d88928}.tag.done{background:#e4f8ef;color:#159d72}.progress{height:7px;background:#eef2f8;border-radius:10px;overflow:hidden;margin:10px 0 0 40px}.progress span{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,#71a9ff,#3979f6)}.project-bottom{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin:6px 0 0 40px}.site{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid #f0f3f8}.site:last-child{border:0;padding-bottom:0}.site-thumb{width:42px;height:42px;border-radius:9px;background:linear-gradient(135deg,#132c46,#4785a8);color:#fff;display:grid;place-items:center;font-weight:800}.site-info{min-width:0;flex:1}.site-info strong{display:block;font-size:12px;margin-bottom:4px}.site-info a{font-size:11px;color:var(--blue);text-decoration:none;overflow-wrap:anywhere}.site-info a:hover{text-decoration:underline}.external{color:var(--muted);text-decoration:none}.task-row{display:flex;align-items:flex-start;gap:9px;padding:10px 0;border-bottom:1px solid #f0f3f8}.task-row:last-child{border:0}.task-row input{accent-color:var(--blue);margin-top:3px}.task-text{flex:1;line-height:1.45}.task-row.completed .task-text{text-decoration:line-through;color:#9aa6b8}.priority{font-size:10px;border-radius:6px;padding:3px 6px;background:#fff0e5;color:#d7832a}.priority.low{background:#e5f8ef;color:#159d72}.priority.high{background:#ffe8e9;color:#d95762}.schedule-item{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #f0f3f8}.schedule-item:last-child{border:0}.schedule-time{width:47px;color:var(--blue);font-weight:700;font-size:12px}.schedule-item strong{font-size:12px}.schedule-item small{display:block;color:var(--muted);margin-top:4px}.quickgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.quick{display:flex;align-items:center;gap:8px;text-decoration:none;color:#405570;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:12px}.quick:hover{border-color:#b8d0ff;background:#f8fbff}.quick span{font-size:16px}.money-row{display:flex;gap:8px;margin-bottom:12px}.money-row input{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;padding:9px}.money-row button,.primary{border:0;border-radius:8px;background:var(--blue);color:#fff;padding:9px 12px}.money-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f3f8}.money-item:last-child{border:0}.muted{color:var(--muted)}.quote{padding:20px;background:linear-gradient(135deg,#f1f7ff,#fff);text-align:center;color:#627590;line-height:1.8}.quote strong{display:block;color:#304b70;font-size:14px;margin-bottom:7px}.empty{color:var(--muted);text-align:center;padding:20px 8px}.section-page{display:none}.section-page.active{display:block}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.section-title h1{font-size:24px;margin:0}.form-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.form-row input,.form-row select,.form-row textarea{border:1px solid var(--line);border-radius:8px;padding:10px;min-width:0}.form-row input{flex:1}.wide-list{padding:0 18px}.wide-list .project{padding:15px 0;border-bottom:1px solid var(--line)}.wide-list .project:last-child{border:0}.mission-row{display:flex;align-items:flex-start;gap:9px;padding:9px 0;border-bottom:1px solid #f0f3f8}.mission-row:last-child{border-bottom:0}.mission-row input{accent-color:var(--blue);margin-top:3px}.mission-row.done .mission-label{text-decoration:line-through;color:#9aa6b8}.mission-label{flex:1;line-height:1.45}.save-dot{color:var(--green);font-size:12px}.notice{background:#f1f7ff;border:1px solid #dbe9ff;padding:12px 14px;border-radius:10px;color:#536783;font-size:12px;line-height:1.7;margin-bottom:14px}.footer{text-align:center;color:#a0adbf;font-size:11px;padding:25px}
+@media(max-width:1150px){.columns{grid-template-columns:repeat(2,minmax(0,1fr))}.columns .stack:last-child{grid-column:1/-1}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.app{grid-template-columns:1fr}.sidebar{padding:10px;border-right:0;border-bottom:1px solid var(--line);gap:10px}.brand{padding:4px 8px}.nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;padding:9px}.sidebar-note{display:none}.topbar{height:58px;padding:0 14px}.topright{display:none}.content{padding:17px 12px}.welcome{align-items:flex-start}.welcome h1{font-size:18px}.welcome .date{display:none}.stats{gap:9px}.stat{padding:12px;gap:8px}.stat-icon{width:32px;height:32px}.stat-value{font-size:18px}.columns{grid-template-columns:1fr}.columns .stack:last-child{grid-column:auto}.search input{padding:9px 10px 9px 34px}.section-title h1{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">M</div><div><strong>My Dashboard</strong><small>自分のペースで、理想をつくる。</small></div></div>
+  <nav class="nav" id="nav">
+    <button class="active" data-page="home"><span class="ico">⌂</span>ホーム</button>
+    <button data-page="projects"><span class="ico">⌘</span>プロジェクト</button>
+    <button data-page="sites"><span class="ico">↗</span>公開サイト</button>
+    <button data-page="money"><span class="ico">▣</span>お金・家計</button>
+    <button data-page="schedule"><span class="ico">▦</span>予定・タスク</button>
+    <button data-page="notes"><span class="ico">▤</span>メモ</button>
+    <button data-page="settings"><span class="ico">⚙</span>設定・データ</button>
+  </nav>
+  <div class="sidebar-note">今日の積み重ねが、<br>未来をつくる。<br><br>— 自分専用スペース —</div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div class="search"><input id="globalSearch" placeholder="プロジェクト・サイト・タスクを検索…"></div>
+  <div class="topright" id="saveStatus" aria-live="polite">● 自動保存</div>
+  <div class="topright" id="topDate"></div>
+</header>
+<div class="content">
+<section class="section-page active" id="page-home">
+  <div class="welcome"><div class="sun">☼</div><div><h1>おかえりなさい！</h1><p>今日やることを少しずつ。いい一日にしていきましょう。</p></div><div class="date" id="todayDate"></div></div>
+  <div class="grid stats">
+    <div class="card stat"><div class="stat-icon green">↗</div><div><div class="stat-label">今月の収入（円）</div><div class="stat-value" id="incomeDisplay">¥0</div><div class="stat-foot">入力した金額を表示</div></div></div>
+    <div class="card stat"><div class="stat-icon red">↘</div><div><div class="stat-label">今月の支出（円）</div><div class="stat-value" id="expenseDisplay">¥0</div><div class="stat-foot">入力した金額を表示</div></div></div>
+    <div class="card stat"><div class="stat-icon blue">⌘</div><div><div class="stat-label">進行中のプロジェクト</div><div class="stat-value" id="projectCount">0</div><div class="stat-foot">制作・開発の進捗</div></div></div>
+    <div class="card stat"><div class="stat-icon purple">✓</div><div><div class="stat-label">未完了タスク</div><div class="stat-value" id="taskCount">0</div><div class="stat-foot">完了チェックで更新</div></div></div>
+  </div>
+  <div class="grid columns">
+    <div class="stack">
+      <div class="card"><div class="card-head"><h2>🎯 今日のミッション</h2><span id="missionRate" class="tag">達成率 0%</span></div><div class="card-body"><div id="missionProgress" class="progress" style="margin:0 0 12px"><span id="missionProgressBar" style="width:0%"></span></div><div id="missionList"></div><div class="form-row" style="margin-top:12px;margin-bottom:0"><input id="newMissionText" placeholder="今日やり遂げたいこと"><button class="primary" id="addMissionBtn">追加</button></div><p class="muted" style="font-size:11px;margin:10px 0 0">今日の日付ごとに保存されます。チェックすると達成率が更新されます。</p></div></div>
+      <div class="card"><div class="card-head"><h2>▦ 今日の予定</h2><button data-goto="schedule">予定を管理 →</button></div><div class="card-body" id="homeSchedule"></div></div>
+      <div class="card"><div class="card-head"><h2>✓ 今日のタスク</h2><button data-goto="schedule">すべて見る →</button></div><div class="card-body" id="homeTasks"></div></div>
+      <div class="card quote"><strong>今日のひとこと</strong>小さな一歩の積み重ねが、<br>大きな未来をつくる。</div>
+    </div>
+    <div class="stack">
+      <div class="card"><div class="card-head"><h2>⌘ プロジェクト進捗</h2><button data-goto="projects">すべて見る →</button></div><div class="card-body" id="homeProjects"></div></div>
+      <div class="card"><div class="card-head"><h2>↗ クイックアクセス</h2></div><div class="card-body"><div class="quickgrid" id="quickLinks"></div></div></div>
+      <div class="card"><div class="card-head"><h2>▤ 最近のメモ</h2><button data-goto="notes">メモを開く →</button></div><div class="card-body" id="homeNotes"></div></div>
+    </div>
+    <div class="stack">
+      <div class="card"><div class="card-head"><h2>↗ 公開サイト</h2><button data-goto="sites">すべて見る →</button></div><div class="card-body" id="homeSites"></div></div>
+      <div class="card"><div class="card-head"><h2>¥ 今月の収支</h2><button data-goto="money">入力・編集 →</button></div><div class="card-body" id="homeMoney"></div></div>
+    </div>
+  </div>
+</section>
+<section class="section-page" id="page-projects">
+  <div class="section-title"><h1>プロジェクト管理</h1><button class="primary" id="addProjectBtn">＋ プロジェクト追加</button></div>
+  <div class="notice">制作・開発の進捗を管理できます。進捗率はスライダーで更新でき、ブラウザに自動保存されます。</div>
+  <div class="card"><div class="wide-list" id="allProjects"></div></div>
+  <div class="card" id="projectFormCard" style="display:none;margin-top:14px"><div class="card-head"><h2>プロジェクトを追加</h2></div><div class="card-body"><div class="form-row"><input id="newProjectName" placeholder="プロジェクト名"><select id="newProjectStatus"><option>企画中</option><option>制作中</option><option>開発中</option><option>公開済み</option><option>完了</option></select></div><div class="form-row"><input id="newProjectProgress" type="number" min="0" max="100" value="0" placeholder="進捗率（0〜100）"><button class="primary" id="saveProjectBtn">保存</button><button id="cancelProjectBtn">キャンセル</button></div></div></div>
+</section>
+<section class="section-page" id="page-sites">
+  <div class="section-title"><h1>公開サイト</h1><button class="primary" id="addSiteBtn">＋ サイト追加</button></div>
+  <div class="notice">公開中の作品をまとめたリンク集です。リンク先は必要に応じて編集してください。</div>
+  <div class="card"><div class="card-body" id="allSites"></div></div>
+  <div class="card" id="siteFormCard" style="display:none;margin-top:14px"><div class="card-head"><h2>サイトを追加</h2></div><div class="card-body"><div class="form-row"><input id="newSiteName" placeholder="サイト名"><input id="newSiteUrl" placeholder="https://example.com"></div><div class="form-row"><button class="primary" id="saveSiteBtn">保存</button><button id="cancelSiteBtn">キャンセル</button></div></div></div>
+</section>
+<section class="section-page" id="page-money">
+  <div class="section-title"><h1>お金・家計</h1></div>
+  <div class="notice">金額はこの端末のブラウザ内に保存されます。銀行・カードとは連携していません。最初は今月の合計を手入力するシンプルな管理です。</div>
+  <div class="grid stats"><div class="card stat"><div class="stat-icon green">↗</div><div><div class="stat-label">今月の収入</div><div class="stat-value" id="moneyIncomeBig">¥0</div></div></div><div class="card stat"><div class="stat-icon red">↘</div><div><div class="stat-label">今月の支出</div><div class="stat-value" id="moneyExpenseBig">¥0</div></div></div><div class="card stat"><div class="stat-icon blue">＝</div><div><div class="stat-label">今月の差額</div><div class="stat-value" id="moneyBalance">¥0</div></div></div></div>
+  <div class="card"><div class="card-head"><h2>今月の金額を入力</h2></div><div class="card-body"><div class="form-row"><label style="flex:1">収入（円）<input id="incomeInput" type="number" min="0" style="display:block;width:100%;margin-top:6px"></label><label style="flex:1">支出（円）<input id="expenseInput" type="number" min="0" style="display:block;width:100%;margin-top:6px"></label></div><button class="primary" id="saveMoneyBtn">金額を保存</button></div></div>
+  <div class="card" style="margin-top:14px"><div class="card-head"><h2>返済・貯金の目標</h2><span class="tag">自動計算</span></div><div class="card-body"><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px"><label>現在の借入残高（円）<input id="debtBalanceInput" type="number" min="0" style="display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px;padding:10px"></label><label>毎月の返済額（円）<input id="monthlyRepaymentInput" type="number" min="0" style="display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px;padding:10px"></label><label>現在の貯金額（円）<input id="savingsInput" type="number" min="0" style="display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px;padding:10px"></label><label>貯金目標（円）<input id="savingsGoalInput" type="number" min="0" style="display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:8px;padding:10px"></label></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:18px"><div><div class="muted" style="font-size:12px">貯金目標の達成率</div><div class="stat-value" id="savingsRate">0%</div><div class="progress" style="margin:0"><span id="savingsProgressBar" style="width:0%"></span></div></div><div><div class="muted" style="font-size:12px">返済期間の目安（利息を除く）</div><div class="stat-value" id="repaymentMonths">—</div><div class="muted" style="font-size:11px">残高 ÷ 毎月の返済額で計算</div></div></div><button class="primary" id="saveGoalsBtn" style="margin-top:16px">返済・貯金目標を保存</button></div></div>
+</section>
+<section class="section-page" id="page-schedule">
+  <div class="section-title"><h1>予定・タスク</h1></div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start">
+    <div class="card"><div class="card-head"><h2>タスク一覧</h2><button id="addTaskBtn">＋ 追加</button></div><div class="card-body"><div class="form-row"><input id="newTaskText" placeholder="例：サイトの修正"><select id="newTaskPriority"><option value="通常">通常</option><option value="高">高</option><option value="低">低</option></select><button class="primary" id="saveTaskBtn">追加</button></div><div id="allTasks"></div></div></div>
+    <div class="card"><div class="card-head"><h2>予定リスト</h2><button id="addScheduleBtn">＋ 追加</button></div><div class="card-body"><div class="form-row"><input id="newScheduleTime" placeholder="時間（例 14:00）" style="max-width:120px"><input id="newScheduleText" placeholder="予定の内容"><button class="primary" id="saveScheduleBtn">追加</button></div><div id="allSchedule"></div></div></div>
+  </div>
+</section>
+<section class="section-page" id="page-notes">
+  <div class="section-title"><h1>メモ</h1></div>
+  <div class="card"><div class="card-body"><div class="form-row"><input id="noteTitle" placeholder="メモのタイトル"><button class="primary" id="saveNoteBtn">メモを保存</button></div><textarea id="noteBody" placeholder="アイデア、やりたいこと、作業メモなど…" style="width:100%;min-height:130px;border:1px solid var(--line);border-radius:9px;padding:12px"></textarea><div id="allNotes" style="margin-top:15px"></div></div></div>
+</section>
+<section class="section-page" id="page-settings">
+  <div class="section-title"><h1>設定・データ</h1></div>
+  <div class="card"><div class="card-head"><h2>データのバックアップ</h2></div><div class="card-body"><p class="muted">登録したプロジェクト・タスク・予定・メモ・家計・今日のミッションをJSONファイルとして書き出せます。入力内容はこのブラウザに自動保存され、必要なときに手動バックアップできます。</p><div class="form-row"><button class="primary" id="exportBtn">データを書き出す</button><label class="quick" style="cursor:pointer">データを読み込む<input id="importFile" type="file" accept="application/json" style="max-width:180px"></label></div><p class="muted">注意：このアプリのデータは現在のブラウザに保存されます。ブラウザのデータ削除や端末変更に備えて、定期的にバックアップしてください。</p><button id="resetBtn" style="border:1px solid #f0c6ca;color:#c94e59;background:#fff;border-radius:8px;padding:9px 12px">サンプルデータに戻す</button></div></div>
+</section>
+<div class="footer">MY DASHBOARD · 自分のペースで、少しずつ。<br>データはこのブラウザに保存されます。</div>
+</div>
+</main>
+</div>
+<script>
+const KEY='my_dashboard_v1';
+const starter={
+ projects:[
+ {id:1,name:'ポートフォリオサイト',status:'公開済み',progress:85,color:'#5798f7'},
+ {id:2,name:'Voice Pokémon Card（カード読み上げ）',status:'制作中',progress:60,color:'#24b995'},
+ {id:3,name:"Collector's Club（オリパサイト）",status:'開発中',progress:65,color:'#8c6be8'},
+ {id:4,name:'カードショップ経営ゲーム',status:'企画中',progress:25,color:'#f6a23e'},
+ {id:5,name:'STUDIO N°08',status:'制作中',progress:45,color:'#e96c79'}
+ ],
+ sites:[
+ {id:1,name:'ポートフォリオ',url:'https://wanderer0207.github.io/portfolio/',symbol:'P'},
+ {id:2,name:"Collector's Club",url:'https://collectors-club.onrender.com/',symbol:'C'},
+ {id:3,name:'STUDIO N°08',url:'https://ikegami.site.je/',symbol:'S'},
+ {id:4,name:'Voice Pokémon Card',url:'',symbol:'V'}
+ ],
+ tasks:[
+ {id:1,text:'ポートフォリオの表示を確認する',priority:'高',done:false},
+ {id:2,text:'カード読み上げ機能をテストする',priority:'高',done:false},
+ {id:3,text:'カードショップ経営ゲームを改善する',priority:'通常',done:false},
+ {id:4,text:'公開サイトのリンクを確認する',priority:'低',done:true}
+ ],
+ schedule:[
+ {id:1,time:'午前',text:'制作プロジェクトの進捗確認'},
+ {id:2,time:'午後',text:'Webサイトまたはゲームを1つ改善'},
+ {id:3,time:'夜',text:'明日のタスクを整理'}
+ ],
+ notes:[{id:1,title:'次にやりたいこと',body:'・ゲームに相場変動イベントを追加\n・ダッシュボードから各制作物をすぐ開けるようにする'}],
+ money:{income:0,expense:0,debtBalance:0,monthlyRepayment:0,savings:0,savingsGoal:500000},
+ missions:{}
+};
+let data=loadData();
+function loadData(){try{const x=JSON.parse(localStorage.getItem(KEY));if(x&&x.projects&&x.tasks){x.money=Object.assign({income:0,expense:0,debtBalance:0,monthlyRepayment:0,savings:0,savingsGoal:500000},x.money||{});x.missions=x.missions||{};x.notes=x.notes||[];x.schedule=x.schedule||[];x.sites=x.sites||[];return x}}catch(e){}return structuredClone(starter)}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data));const s=el('saveStatus');if(s)s.innerHTML='<span class="save-dot">● 保存済み</span>';localStorage.setItem(KEY+'_saved_at',new Date().toISOString());render()}catch(e){const s=el('saveStatus');if(s)s.textContent='保存エラー：空き容量を確認'}}
+function yen(n){return '¥'+Number(n||0).toLocaleString('ja-JP')}
+function el(id){return document.getElementById(id)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function statusTag(s){let c=s==='完了'||s==='公開済み'?'done':s==='企画中'?'plan':'';return `<span class="tag ${c}">${esc(s)}</span>`}
+function projectHtml(p,editable=false){return `<div class="project"><div class="project-top"><div class="project-dot" style="background:${p.color||'#5798f7'}">✦</div><div class="project-name">${esc(p.name)}</div>${statusTag(p.status)}${editable?`<button class="link-button delete-project" data-id="${p.id}">削除</button>`:''}</div>${editable?`<div style="margin:12px 0 0 40px"><input aria-label="進捗率" class="progress-input" data-id="${p.id}" type="range" min="0" max="100" value="${p.progress}" style="width:100%;accent-color:var(--blue)"><div class="form-row"><select class="status-input" data-id="${p.id}">${['企画中','制作中','開発中','公開済み','完了'].map(s=>`<option ${s===p.status?'selected':''}>${s}</option>`).join('')}</select><span class="muted">${p.progress}% 完了</span></div></div>`:`<div class="progress"><span style="width:${p.progress}%"></span></div><div class="project-bottom"><span>進捗</span><strong>${p.progress}%</strong></div>`}</div>`}
+function siteHtml(s){return `<div class="site"><div class="site-thumb">${esc(s.symbol||'↗')}</div><div class="site-info"><strong>${esc(s.name)}</strong>${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.url)}</a>`:'<span class="muted">URL未設定</span>'}</div><a class="external" href="${s.url?esc(s.url):'#'}" ${s.url?'target="_blank" rel="noopener noreferrer"':'onclick="return false"'} aria-label="サイトを開く">↗</a></div>`}
+function taskHtml(t){return `<div class="task-row ${t.done?'completed':''}"><input type="checkbox" data-task="${t.id}" ${t.done?'checked':''} aria-label="タスク完了"><div class="task-text">${esc(t.text)}</div><span class="priority ${t.priority==='高'?'high':t.priority==='低'?'low':''}">${esc(t.priority)}</span><button class="link-button delete-task" data-id="${t.id}" aria-label="タスク削除">×</button></div>`}
+function scheduleHtml(s){return `<div class="schedule-item"><div class="schedule-time">${esc(s.time)}</div><div style="flex:1"><strong>${esc(s.text)}</strong></div><button class="link-button delete-schedule" data-id="${s.id}">×</button></div>`}
+function dateKey(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function todaysMissions(){const k=dateKey();if(!data.missions[k])data.missions[k]=[];return data.missions[k]}
+function missionHtml(m){return `<div class="mission-row ${m.done?'done':''}"><input type="checkbox" data-mission="${m.id}" ${m.done?'checked':''} aria-label="ミッション達成"><div class="mission-label">${esc(m.text)}</div><button class="link-button delete-mission" data-id="${m.id}" aria-label="ミッション削除">×</button></div>`}
+function renderMissions(){const ms=todaysMissions();const done=ms.filter(m=>m.done).length;const rate=ms.length?Math.round(done/ms.length*100):0;el('missionRate').textContent=`達成率 ${rate}%`;el('missionProgressBar').style.width=rate+'%';el('missionList').innerHTML=ms.map(missionHtml).join('')||'<div class="empty">今日のミッションを3つ以内で決めてみよう。</div>'}
+function render(){
+ const today=new Date();const fmt={year:'numeric',month:'long',day:'numeric',weekday:'short'};el('topDate').textContent=today.toLocaleDateString('ja-JP',fmt);el('todayDate').textContent=today.toLocaleDateString('ja-JP',fmt);
+ el('incomeDisplay').textContent=yen(data.money.income);el('expenseDisplay').textContent=yen(data.money.expense);renderMissions();el('projectCount').textContent=data.projects.filter(p=>!['完了','公開済み'].includes(p.status)).length;el('taskCount').textContent=data.tasks.filter(t=>!t.done).length;
+ el('homeProjects').innerHTML=data.projects.slice(0,5).map(p=>projectHtml(p)).join('')||'<div class="empty">プロジェクトはまだありません</div>';
+ el('allProjects').innerHTML=data.projects.map(p=>projectHtml(p,true)).join('')||'<div class="empty">プロジェクトを追加してください</div>';
+ el('homeSites').innerHTML=data.sites.slice(0,5).map(siteHtml).join('')||'<div class="empty">サイトはまだありません</div>';el('allSites').innerHTML=data.sites.map(s=>siteHtml(s)+`<div style="text-align:right;margin-top:-6px;margin-bottom:8px"><button class="link-button delete-site" data-id="${s.id}">このサイトを削除</button></div>`).join('')||'<div class="empty">サイトを追加してください</div>';
+ el('homeTasks').innerHTML=data.tasks.filter(t=>!t.done).slice(0,5).map(taskHtml).join('')||'<div class="empty">未完了タスクはありません 🎉</div>';el('allTasks').innerHTML=data.tasks.map(taskHtml).join('')||'<div class="empty">タスクを追加してください</div>';
+ el('homeSchedule').innerHTML=data.schedule.slice(0,5).map(scheduleHtml).join('')||'<div class="empty">予定はまだありません</div>';el('allSchedule').innerHTML=data.schedule.map(scheduleHtml).join('')||'<div class="empty">予定を追加してください</div>';
+ const qs=[['◈','GitHub','https://github.com/wanderer0207'],['✕','X（Twitter）','https://x.com/'],['▶','YouTube','https://youtube.com/'],['◎','ポートフォリオ','https://wanderer0207.github.io/portfolio/'],['▣',"Collector's Club",'https://collectors-club.onrender.com/'],['✦','STUDIO N°08','https://ikegami.site.je/']];
+ el('quickLinks').innerHTML=qs.map(q=>`<a class="quick" href="${q[2]}" target="_blank" rel="noopener noreferrer"><span>${q[0]}</span>${q[1]}</a>`).join('');
+ el('homeNotes').innerHTML=data.notes.slice(-3).reverse().map(n=>`<div style="padding:7px 0;border-bottom:1px solid #f0f3f8"><strong>${esc(n.title)}</strong><div class="muted" style="white-space:pre-wrap;margin-top:4px;font-size:12px">${esc(n.body.slice(0,120))}</div></div>`).join('')||'<div class="empty">メモはまだありません</div>';
+ el('homeMoney').innerHTML=`<div class="money-item"><span class="muted">収入</span><strong style="color:var(--green)">${yen(data.money.income)}</strong></div><div class="money-item"><span class="muted">支出</span><strong style="color:var(--red)">${yen(data.money.expense)}</strong></div><div class="money-item"><span class="muted">差額</span><strong>${yen(data.money.income-data.money.expense)}</strong></div>`;
+ el('moneyIncomeBig').textContent=yen(data.money.income);el('moneyExpenseBig').textContent=yen(data.money.expense);el('moneyBalance').textContent=yen(data.money.income-data.money.expense);el('incomeInput').value=data.money.income;el('expenseInput').value=data.money.expense;
+ el('debtBalanceInput').value=data.money.debtBalance||0;el('monthlyRepaymentInput').value=data.money.monthlyRepayment||0;el('savingsInput').value=data.money.savings||0;el('savingsGoalInput').value=data.money.savingsGoal||0;
+ const sr=Number(data.money.savingsGoal)>0?Math.min(100,Math.round(Number(data.money.savings||0)/Number(data.money.savingsGoal)*100)):0;el('savingsRate').textContent=sr+'%';el('savingsProgressBar').style.width=sr+'%';const db=Number(data.money.debtBalance||0),mr=Number(data.money.monthlyRepayment||0);el('repaymentMonths').textContent=db<=0?'返済なし':mr>0?Math.ceil(db/mr)+'か月':'返済額を入力';
+ el('allNotes').innerHTML=data.notes.slice().reverse().map(n=>`<div class="card" style="box-shadow:none;margin-top:10px"><div class="card-body"><div style="display:flex;justify-content:space-between;gap:10px"><strong>${esc(n.title)}</strong><button class="link-button delete-note" data-id="${n.id}">削除</button></div><p style="white-space:pre-wrap;line-height:1.7">${esc(n.body)}</p></div></div>`).join('')||'<div class="empty">保存したメモはありません</div>';
+}
+function goto(page){document.querySelectorAll('.section-page').forEach(p=>p.classList.remove('active'));el('page-'+page).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));window.scrollTo({top:0,behavior:'smooth'})}
+el('nav').addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b)goto(b.dataset.page)});
+document.addEventListener('click',e=>{const g=e.target.closest('[data-goto]');if(g)goto(g.dataset.goto)});
+el('addProjectBtn').onclick=()=>el('projectFormCard').style.display='block';el('cancelProjectBtn').onclick=()=>el('projectFormCard').style.display='none';
+el('saveProjectBtn').onclick=()=>{let name=el('newProjectName').value.trim();if(!name)return alert('プロジェクト名を入力してください');data.projects.push({id:Date.now(),name,status:el('newProjectStatus').value,progress:Math.max(0,Math.min(100,Number(el('newProjectProgress').value)||0)),color:['#5798f7','#24b995','#8c6be8','#f6a23e','#e96c79'][data.projects.length%5]});el('newProjectName').value='';el('projectFormCard').style.display='none';save()};
+el('allProjects').addEventListener('input',e=>{if(e.target.matches('.progress-input')){const p=data.projects.find(p=>p.id==e.target.dataset.id);if(p){p.progress=Number(e.target.value);save()}}});
+el('allProjects').addEventListener('change',e=>{if(e.target.matches('.status-input')){const p=data.projects.find(p=>p.id==e.target.dataset.id);if(p){p.status=e.target.value;save()}}});
+el('allProjects').addEventListener('click',e=>{const b=e.target.closest('.delete-project');if(b&&confirm('このプロジェクトを削除しますか？')){data.projects=data.projects.filter(p=>p.id!=b.dataset.id);save()}});
+el('addSiteBtn').onclick=()=>el('siteFormCard').style.display='block';el('cancelSiteBtn').onclick=()=>el('siteFormCard').style.display='none';
+el('saveSiteBtn').onclick=()=>{const name=el('newSiteName').value.trim(),url=el('newSiteUrl').value.trim();if(!name)return alert('サイト名を入力してください');if(url&&!/^https?:\/\//i.test(url))return alert('URLは https:// から入力してください');data.sites.push({id:Date.now(),name,url,symbol:name[0]});el('newSiteName').value='';el('newSiteUrl').value='';el('siteFormCard').style.display='none';save()};
+el('allSites').addEventListener('click',e=>{const b=e.target.closest('.delete-site');if(b&&confirm('このサイトを削除しますか？')){data.sites=data.sites.filter(s=>s.id!=b.dataset.id);save()}});
+document.addEventListener('change',e=>{if(e.target.matches('[data-task]')){const t=data.tasks.find(t=>t.id==e.target.dataset.task);if(t){t.done=e.target.checked;save()}}});
+document.addEventListener('click',e=>{const b=e.target.closest('.delete-task');if(b){data.tasks=data.tasks.filter(t=>t.id!=b.dataset.id);save()}const s=e.target.closest('.delete-schedule');if(s){data.schedule=data.schedule.filter(x=>x.id!=s.dataset.id);save()}const n=e.target.closest('.delete-note');if(n){data.notes=data.notes.filter(x=>x.id!=n.dataset.id);save()}});
+el('saveTaskBtn').onclick=()=>{const text=el('newTaskText').value.trim();if(!text)return alert('タスクを入力してください');data.tasks.push({id:Date.now(),text,priority:el('newTaskPriority').value,done:false});el('newTaskText').value='';save()};
+el('saveScheduleBtn').onclick=()=>{const text=el('newScheduleText').value.trim();if(!text)return alert('予定の内容を入力してください');data.schedule.push({id:Date.now(),time:el('newScheduleTime').value.trim()||'未定',text});el('newScheduleText').value='';el('newScheduleTime').value='';save()};
+el('saveMoneyBtn').onclick=()=>{data.money={income:Math.max(0,Number(el('incomeInput').value)||0),expense:Math.max(0,Number(el('expenseInput').value)||0)};save();alert('今月の金額を保存しました')};
+el('saveNoteBtn').onclick=()=>{const title=el('noteTitle').value.trim(),body=el('noteBody').value.trim();if(!title||!body)return alert('タイトルとメモ内容を入力してください');data.notes.push({id:Date.now(),title,body});el('noteTitle').value='';el('noteBody').value='';save()};
+el('addMissionBtn').onclick=()=>{const input=el('newMissionText');const text=input.value.trim();if(!text)return alert('ミッションを入力してください');const ms=todaysMissions();if(ms.length>=3)return alert('今日のミッションは3つまでにすると集中しやすいよ');ms.push({id:Date.now(),text,done:false});input.value='';save()};
+document.addEventListener('change',e=>{if(e.target.matches('[data-mission]')){const m=todaysMissions().find(m=>m.id==e.target.dataset.mission);if(m){m.done=e.target.checked;save()}}});
+document.addEventListener('click',e=>{const b=e.target.closest('.delete-mission');if(b){data.missions[dateKey()]=todaysMissions().filter(m=>m.id!=b.dataset.id);save()}});
+el('saveGoalsBtn').onclick=()=>{data.money=Object.assign({},data.money,{debtBalance:Math.max(0,Number(el('debtBalanceInput').value)||0),monthlyRepayment:Math.max(0,Number(el('monthlyRepaymentInput').value)||0),savings:Math.max(0,Number(el('savingsInput').value)||0),savingsGoal:Math.max(0,Number(el('savingsGoalInput').value)||0)});save();alert('返済・貯金目標を保存しました')};
+el('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='my-dashboard-backup.json';a.click();URL.revokeObjectURL(a.href)};
+el('importFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const obj=JSON.parse(await f.text());if(!obj.projects||!obj.tasks||!obj.money)throw Error();data=obj;save();alert('データを読み込みました')}catch(err){alert('読み込めないファイルです。バックアップJSONを選んでください')}e.target.value=''};
+el('resetBtn').onclick=()=>{if(confirm('現在のデータを初期サンプルに戻します。事前にバックアップしましたか？')){data=structuredClone(starter);save();alert('初期データに戻しました')}};
+el('globalSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();if(!q){render();return}const matches=data.projects.some(p=>p.name.toLowerCase().includes(q))||data.sites.some(s=>s.name.toLowerCase().includes(q)||s.url.toLowerCase().includes(q))||data.tasks.some(t=>t.text.toLowerCase().includes(q))||data.notes.some(n=>(n.title+n.body).toLowerCase().includes(q));if(matches){if(data.projects.some(p=>p.name.toLowerCase().includes(q)))goto('projects');else if(data.sites.some(s=>(s.name+s.url).toLowerCase().includes(q)))goto('sites');else if(data.tasks.some(t=>t.text.toLowerCase().includes(q)))goto('schedule');else goto('notes')}});
+render();
+</script>
+</body>
+</html>
